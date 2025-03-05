@@ -766,7 +766,7 @@ def get_edge(segs_gt, label, input_img):
 def parse():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--pretrained', type=str, default="models\Structured3D_pretrained.pt", required=False, help='the pretrained model')
+    parser.add_argument('-r', '--room-layout-model', type=str, required=True, help='the room layout estimation model')
     parser.add_argument('--visual', default=True, action='store_true', help='whether to visual the results')
     parser.add_argument('--exam', action='store_true', help='test one example on nyu303 dataset')
     parser.add_argument('--num_workers', type=int, default=0)
@@ -812,8 +812,8 @@ if __name__ == '__main__':
     #     model = torch.nn.DataParallel(model)
 
     # reload weights
-    if cfg.pretrained:
-        state_dict = torch.load(cfg.pretrained,
+    if cfg.room_layout_model:
+        state_dict = torch.load(cfg.room_layout_model,
                                 map_location=torch.device('cpu'))
         model.load_state_dict(state_dict)
 
