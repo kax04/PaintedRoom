@@ -2,7 +2,8 @@
 
 本プロジェクトでは、**絵画における室内レイアウト推定**（壁・床・天井の領域分割）を行います。  
 通常のレイアウト推定モデルは写真を対象に学習されており、絵画に適用すると誤検出が多発します。  
-本手法では 線検出（[M-LSD](https://github.com/navervision/mlsd)）を用いて**構造線を検出**し、写真向けに学習された室内レイアウト推定モデル([NonCuboid Room Layout Estimation](https://github.com/CYang0515/NonCuboidRoom))を絵画にも適用できるように、入力画像を最適化します。
+本手法では 線検出（[M-LSD](https://github.com/navervision/mlsd)）で得られた線の中から**構造線を選出**し、写真向けに学習された室内レイアウト推定モデル([NonCuboid Room Layout Estimation](https://github.com/CYang0515/NonCuboidRoom))を絵画にも適用できるように、入力画像を最適化します。
+これにより、絵画の**曖昧な輪郭線**や**非現実的な影の表現**に対応し、写真向けモデルの適用精度を向上させます。
 
 
 ![Image](https://github.com/user-attachments/assets/12bad0fa-3c44-4bcc-8660-73ffe9f7d40a)
