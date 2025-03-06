@@ -2,7 +2,7 @@
 
 本プロジェクトでは、**絵画における室内レイアウト推定**（壁・床・天井の領域分割）を行います。  
 通常のレイアウト推定モデルは写真を対象に学習されており、絵画に適用すると誤検出が多発します。  
-本手法では **信頼度に基づく線検出（M-LSD）** を用いて**構造線を検出**し、レイアウト推定モデルに適した入力画像を生成します。
+本手法では 線検出（[M-LSD](https://github.com/navervision/mlsd)）を用いて**構造線を検出**し、写真向けに学習された室内レイアウト推定モデル([NonCuboid Room Layout Estimation](https://github.com/CYang0515/NonCuboidRoom))を絵画にも適用できるように、入力画像を最適化します。
 
 
 ![Image](https://github.com/user-attachments/assets/12bad0fa-3c44-4bcc-8660-73ffe9f7d40a)
@@ -35,8 +35,8 @@ conda env create -n PaintedLayout -f PaintRoomLayout.yaml
 
 ```
 INPUT_DIR/
-├── input.jpeg  # 入力絵画
-└── input_layout.json  # 正解レイアウト
+├── *.jpeg  # 入力絵画
+└── *.json  # 正解レイアウト
 ```
 
 
