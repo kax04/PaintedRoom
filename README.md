@@ -11,7 +11,7 @@
 
 
 ## インストール
-このコードは、Windows11,  PyTorch v1.7, CUDA10.2, cuDNN v8.9.6でテストされている。
+このコードは、Windows11,  PyTorch v1.7, CUDA10.2, cuDNN v8.9.6でテストされています。
 ```
 conda env create -n PaintedLayout -f PaintRoomLayout.yaml
 ```
@@ -24,7 +24,7 @@ conda env create -n PaintedLayout -f PaintRoomLayout.yaml
 
    
 2. **室内レイアウト推定モデル ([NonCuboid Room Layout Estimation](https://github.com/CYang0515/NonCuboidRoom))**
-  - 本論文の実験では[Structured3Dデータセットで学習されたモデル](https://drive.google.com/file/d/1DZnnOUMh6llVwhBvb-yo9ENVmN4o42x8/view "pretrained model")を使用した。
+  - 本論文の実験では[Structured3Dデータセットで学習されたモデル](https://drive.google.com/file/d/1DZnnOUMh6llVwhBvb-yo9ENVmN4o42x8/view "pretrained model")を使用しました。
 
 
 
